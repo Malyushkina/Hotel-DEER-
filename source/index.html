@@ -2,56 +2,65 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.min.css" />
     <title>Отель-заповедник "Лесное"</title>
 </head>
 
-<body class="page">
+<body class="page ">
     <header class="page__header">
-        <nav class="page__nav nav">
-            <a href="#" class="nav__item">Об отеле</a>
-            <a href="#" class="nav__item">Номера и цены</a>
-            <a href="#" class="nav__item">мероприятия</a>
-            <a href="#" class="nav__item">Контакты</a>
-            <span class="nav__item nav__item--tel">+7 (495) 005-61-59</span>
-        </nav>
+        <div class="container page__container">
+            <nav class="page__nav nav">
+                <a href="#" class="nav__item">Об отеле</a>
+                <a href="#" class="nav__item">Номера и цены</a>
+                <a href="#" class="nav__item">мероприятия</a>
+                <a href="#" class="nav__item">Контакты</a>
+                <span class="nav__item nav__item--tel">+7 (495) 005-61-59</span>
+            </nav>
+        </div>
     </header>
     <section class="page__main main">
-        <h1 class="visually-hidden">ОТЕЛЬ-ЗАПОВЕДНИК "ЛЕСНОЕ"</h1>
-        <div class="main__title">
-            <div class="main__subtitle">ОТЕЛЬ-ЗАПОВЕДНИК</div>
-            <div class="main__logo logo">
-                <img src="./img/logo.svg" alt="Премиальный отдых в отеле Лесное" class="logo__img" width="100%">
+        <div class="container page__container">
+            <h1 class="visually-hidden">ОТЕЛЬ-ЗАПОВЕДНИК "ЛЕСНОЕ"</h1>
+            <div class="main__wrapper">
+                <div class="main__title">
+                    <div class="main__subtitle">ОТЕЛЬ-ЗАПОВЕДНИК</div>
+                    <div class="main__logo logo">
+                        <img src="./img/logo.svg" alt="Премиальный отдых в отеле Лесное" class="logo__img"
+                            width="100%" />
+                    </div>
+                    <div class="main__slogan">ПРЕМИАЛЬНЫЙ ОТДЫХ В ПОДМОСКОВЬЕ</div>
+                </div>
+                <div class="main__offer offer">
+                    <div class="main__price price">
+                        <p class="price__sup">ОТ</p>
+                        <p class="price__number">5 500 ₽</p>
+                        <p class="price__sub">в сутки</p>
+                    </div>
+                    <div class="offer__description">
+                        4х разовое питание и all inclusive. Собственное подсобное хозяйство,
+                        бассейн, баня, конный двор и контактный зоопарк.
+                    </div>
+                </div>
             </div>
-            <div class="main__slogan">ПРЕМИАЛЬНЫЙ ОТДЫХ В ПОДМОСКОВЬЕ</div>
-        </div>
-        <div class="main__offer offer">
-            <div class="main__price price">
-                <p class="price__sup">ОТ</p>
-                <p class="price__number">5 500 ₽</p>
-                <p class="price__sub">в сутки</p>
-            </div>
-            <div class="offer__description">4х разовое питание и all inclusive. Собственное подсобное хозяйство,
-                бассейн, баня, конный двор
-                и контактный зоопарк.</div>
         </div>
         <form action="aaa.php" class="main__booking form">
-            <h2 class="form__title">Бронирование номеров</h2>
-            <label for="entering" class="form__label">Заезд
-                <input type="date" id="entering" class="form__input">
-            </label>
-            <label for="departure " class="form__label">Выезд
-                <input type="date" id="departure " class="form__input">
-            </label>
-            <label for="guests " class="form__label">Гости
-                <input type="number" id="guests " class="form__input">
-            </label>
-            <button class="form__button">Найти номер</button>
+            <div class="container page__container">
+                <h2 class="form__title">Бронирование номеров</h2>
+                <label for="entering" class="form__label">Заезд
+                    <input type="date" id="entering" class="form__input" />
+                </label>
+                <label for="departure " class="form__label">Выезд
+                    <input type="date" id="departure " class="form__input" />
+                </label>
+                <label for="guests " class="form__label">Гости
+                    <input type="number" id="guests " class="form__input" />
+                </label>
+                <button class="form__button">Найти номер</button>
+            </div>
         </form>
-
     </section>
-
 </body>
 
 </html>

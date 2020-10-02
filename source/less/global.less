@@ -1,0 +1,54 @@
+.page {
+  height: 100%;
+  font-family: @font--base;
+  font-weight: normal;
+  font-size: @font-size*1.8;
+  line-height: 28/18;
+  background-color: #fff;
+  background-image: url("../img/deer@1x.png"), url("../img/background@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top left, top center;
+  background-size: auto 100%, cover;
+
+  @media (min-resolution:2dppx) {
+    background-image: url("../img/deer@2x.png"), url("../img/background@2x.jpg");
+  }
+}
+
+.page__container {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-base-width) {
+    width: 1280px;
+  }
+
+  @media (min-width: @desktop-max-width) {
+    width: 1860px;
+  }
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+
+  white-space: nowrap;
+
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(100%);
+  overflow: hidden;
+}
