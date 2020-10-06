@@ -1,9 +1,10 @@
-
-
 .page__container {
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+
+  @media (min-width: @desktop-base-width) {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
 }
 
 .container {
@@ -15,7 +16,7 @@
   }
 
   @media (min-width: @desktop-base-width) {
-    width: 1280px;
+    width: 1395px;
   }
 
   @media (min-width: @desktop-max-width) {

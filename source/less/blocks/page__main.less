@@ -1,7 +1,19 @@
+.main{
+    padding-bottom: 50px;
+}
 .main__wrapper {
-    flex-basis: 1040px;
+    flex-basis: 100%;
     flex-grow: 0;
     flex-shrink: 1;
+    padding-top: 50px;
+
+    @media(min-width:@desktop-base-width) {
+        flex-basis: 780px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        flex-basis: 1040px;
+    }
 }
 
 .main__title {
@@ -9,32 +21,68 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
-    padding-right: 225px;
-    padding-bottom: 84px;
+    padding-bottom: 40px;
     font-family: @font--additional;
     color: #444444;
+
+    @media(min-width:@desktop-base-width) {
+        padding-right: 171px;
+        padding-bottom: 62px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        padding-right: 225px;
+        padding-bottom: 84px;
+    }
+}
+
+.main__logo {
+    width: 100%;
+}
+
+.logo__img {
+    max-width: 100%;
 }
 
 .main__subtitle {
-    padding-left: 64px;
-    margin-bottom: 5px;
-    font-size: @font-size*3.4;
+    padding-left: 22px;
+    font-size: 12px;
+
+    @media(min-width:@desktop-base-width) {
+        font-size: @font-size*2.6;
+        padding-left: 48px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        padding-left: 64px;
+        margin-bottom: 5px;
+        font-size: @font-size*3.4;
+    }
 }
 
 .main__slogan {
-    padding-top: 15px;
     align-self: flex-end;
-    font-size: @font-size*5.1;
     font-weight: 300;
+    font-size: 17.5px;
+
+
+    @media(min-width:@desktop-base-width) {
+        font-size: @font-size*3.8;
+        padding-top: 10px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        padding-top: 15px;
+
+        font-size: @font-size*5.1;
+    }
 }
 
 .offer {
     position: relative;
-    margin-left: 218px;
-    padding-left: 30px;
-    padding-bottom: 91px;
-    width: 370px;
+    margin-left: 39px;
+    margin-bottom: 60px;
+    width: 225px;
     font-family: @font--base;
 
     &::before {
@@ -46,39 +94,97 @@
         height: 100%;
         background-image: url("../img/decor-price.svg");
         background-repeat: no-repeat;
+        background-size: contain;
+
+        @media(min-width:@desktop-base-width) {
+            width: 18.1px;
+        }
+    }
+
+    @media(min-width:@desktop-base-width) {
+        margin-left: 170px;
+        padding-left: 16px;
+        width: 325px;
+        padding-bottom: 68px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        margin-left: 218px;
+        padding-left: 30px;
+        padding-bottom: 91px;
+        width: 370px;
     }
 }
 
 .main__price {
+    padding-bottom: 20px;
     color: #c7af8a;
     text-transform: lowercase;
-    font-size: @font-size*1.642;
+
     font-weight: 500;
-    padding-top: 8px;
+
+
+    @media(min-width:@desktop-base-width) {
+        font-size: 13px;
+        padding-top: 7px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        font-size: 16.42;
+        padding-top: 8px;
+    }
 }
 
 .price__sup {
     margin: 0;
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 10px;
 }
 
 .price__number {
     padding: 0;
     margin: 0;
-    font-size: 43.75px;
     line-height: 1;
+    font-size: 26px;
+
+    @media(min-width:@desktop-base-width) {
+        font-size: 33px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        font-size: 43.75px;
+    }
 }
 
 .price__sub {
     margin: 0;
-    padding-bottom: 27px;
-    padding-left: 97px;
-    font-size: @font-size*1.8;
+    padding-left: 45px;
+    font-size: 13px;
     line-height: 1;
+
+    @media(min-width:@desktop-base-width) {
+        font-size: 14px;
+        padding-bottom: 17px;
+        padding-left: 71px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        padding-bottom: 27px;
+        padding-left: 97px;
+        font-size: 18px;
+    }
 }
 
 .offer__description {
-    font-size: 18px;
+    font-size: 12px;
     line-height: 28/18;
+
+    @media(min-width:@desktop-base-width) {
+        font-size: 14px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        font-size: 18px;
+    }
 }

@@ -1,111 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.min.css" />
-    <title>Отель-заповедник "Лесное"</title>
-    <!-- Pixel Glass -->
-    <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        /* Mobile layout by default */
-        background-image: url("img/320.png");
-      }
-      /* Tablet */
-      @media (min-width: 760px) {
-        HTML {
-          /* Tablet layout */
-          background-image: url("img/760.png");
-        }
-      }
-      /* Desktop */
-      @media (min-width: 1920px) {
-        HTML {
-          /* Desktop layout */
-          background-image: url("./img/main.png");
-        }
-      }
-    </style>
-    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet" />
-    <script src="../node_modules/pixel-glass/script.js"></script>
-    <!-- // Pixel Glass -->
-  </head>
 
-  <body class="page">
-    <div class="page__img-wrapper">
-      <img
-        src="./img/deer@1x.png"
-        alt="Отель-заповедник Лесное"
-        width="975"
-        class="page__img"
-      />
-      <img
-        src="./img/deer-add@1x.png"
-        alt=""
-        width="156"
-        class="page__img--add"
-      />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/styles.min.css" />
+  <script src="js/main.js" defer></script>
+  <title>Отель-заповедник "Лесное"</title>
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* Mobile layout by default */
+      background-image: url("img/320.png");
+    }
+
+    /* Tablet */
+    @media (min-width: 760px) {
+      HTML {
+        /* Tablet layout */
+        background-image: url("img/760.png");
+      }
+    }
+
+    @media (min-width: 1440px) {
+      HTML {
+        /* Tablet layout */
+        background-image: url("./img/main1440.png");
+      }
+    }
+
+    /* Desktop */
+    @media (min-width: 1920px) {
+      HTML {
+        /* Desktop layout */
+        background-image: url("./img/main.png");
+      }
+    }
+  </style>
+  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet" />
+  <script src="../node_modules/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
+</head>
+
+<body class="page">
+  
+  <header class="page__header">
+    <div class="container page__container">
+      <nav class="page__nav nav nav--closed nav--nojs">
+        <button class="nav__toggle" type="button">
+          <span class="visually-hidden"> Открыть меню </span>
+        </button>
+        <a href="#" class="nav__item">Об отеле</a>
+        <a href="#" class="nav__item">Номера и цены</a>
+        <a href="#" class="nav__item">мероприятия</a>
+        <a href="#" class="nav__item">Контакты</a>
+        <span class="nav__item nav__item--tel">+7 (495) 005-61-59</span>
+      </nav>
     </div>
-    <header class="page__header">
-      <div class="container page__container">
-        <nav class="page__nav nav">
-          <a href="#" class="nav__item">Об отеле</a>
-          <a href="#" class="nav__item">Номера и цены</a>
-          <a href="#" class="nav__item">мероприятия</a>
-          <a href="#" class="nav__item">Контакты</a>
-          <span class="nav__item nav__item--tel">+7 (495) 005-61-59</span>
-        </nav>
-      </div>
-    </header>
-    <section class="page__main main">
-      <div class="container page__container">
-        <h1 class="visually-hidden">ОТЕЛЬ-ЗАПОВЕДНИК "ЛЕСНОЕ"</h1>
-        <div class="main__wrapper">
-          <div class="main__title">
-            <div class="main__subtitle">ОТЕЛЬ-ЗАПОВЕДНИК</div>
-            <div class="main__logo logo">
-              <img
-                src="./img/logo.svg"
-                alt="Премиальный отдых в отеле Лесное"
-                class="logo__img"
-                width="100%"
-              />
-            </div>
-            <div class="main__slogan">ПРЕМИАЛЬНЫЙ ОТДЫХ В ПОДМОСКОВЬЕ</div>
+  </header>
+  <section class="page__main main">
+    <div class="page__img-wrapper">
+    <picture>
+      <source media="(min-width: 1920px)" srcset="
+                    img/deer@1x.png ,
+                     img/deer@2x.png 2x" />
+      <source media="(min-width: 1440px)" srcset="
+                    img/deer-desktop-base@1x.png ,
+                     img/deer-desktop-base@2x.png 2x" />
+      <source media="(min-width: 768px)" srcset="
+                     img/deer-tablet@1x.png ,
+                      img/deer-tablet@2x.png 2x" />
+      <img src="img/deer-mobile@1x.png" alt="Отель-заповедник Лесное" width="180" class="page__img"
+        srcset="img/deer-mobile@1x.png, img/deer-mobile@2x.png 2x" />
+
+    </picture>
+    <picture>
+      <source media="(min-width: 1440px)" srcset="
+                    img/deer-add-desktop-base@1x.png ,
+                     img/deer-add-desktop-base@2x.png 2x" />
+      <img src="img/deer-add-mobile@1x.png" alt="" width="156" class="page__img--add" />
+    </picture>
+  </div>
+    <div class="container page__container">
+      <h1 class="visually-hidden">ОТЕЛЬ-ЗАПОВЕДНИК "ЛЕСНОЕ"</h1>
+      <div class="main__wrapper">
+        <div class="main__title">
+          <div class="main__subtitle">ОТЕЛЬ-ЗАПОВЕДНИК</div>
+          <div class="main__logo logo">
+            <img src="./img/logo.svg" alt="Премиальный отдых в отеле Лесное" class="logo__img" width="100%" />
           </div>
-          <div class="main__offer offer">
-            <div class="main__price price">
-              <p class="price__sup">ОТ</p>
-              <p class="price__number">5 500 ₽</p>
-              <p class="price__sub">в сутки</p>
-            </div>
-            <div class="offer__description">
-              4х разовое питание и all inclusive. Собственное подсобное
-              хозяйство, бассейн, баня, конный двор<br> и контактный зоопарк.
-            </div>
+          <div class="main__slogan">ПРЕМИАЛЬНЫЙ ОТДЫХ В ПОДМОСКОВЬЕ</div>
+        </div>
+        <div class="main__offer offer">
+          <div class="main__price price">
+            <p class="price__sup">ОТ</p>
+            <p class="price__number">5 500 ₽</p>
+            <p class="price__sub">в сутки</p>
+          </div>
+          <div class="offer__description">
+            4х разовое питание и all inclusive. Собственное подсобное
+            хозяйство, бассейн, баня, конный двор<br />
+            и контактный зоопарк.
           </div>
         </div>
       </div>
-      <div class="container page__container">
-        <form action="aaa.php" class="main__booking form">
-          <h2 class="form__title">Бронирование номеров</h2>
-          <label for="entering" class="form__label"
-            >Заезд
-            <input type="date" id="entering" class="form__input" />
-          </label>
-          <label for="departure " class="form__label"
-            >Выезд
-            <input type="date" id="departure " class="form__input" />
-          </label>
-          <label for="guests " class="form__label"
-            >Гости
-            <input type="number" id="guests " class="form__input" />
-          </label>
-          <button class="form__button">Найти номер</button>
-        </form>
-      </div>
-    </section>
-  </body>
+    </div>
+    <div class="container page__container">
+      <form action="aaa.php" class="main__booking form">
+        <h2 class="form__title">Бронирование номеров</h2>
+        <label for="entering" class="form__label">Заезд
+          <input type="text" id="entering" class="form__input datepicker-here" value="2019-03-04" />
+        </label>
+
+        <label for="departure " class="form__label">Выезд
+          <input type="text" id="departure " class="form__input datepicker-here" value="2019-03-04" />
+        </label>
+
+        <label for="guests " class="form__label form__label--guests">Гости
+          <input type="number" id="guests " class="form__input form__input--guests" placeholder="1" />
+        </label>
+        <button class="form__button">Найти номер</button>
+      </form>
+    </div>
+  </section>
+</body>
+
 </html>

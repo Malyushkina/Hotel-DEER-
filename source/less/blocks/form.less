@@ -1,42 +1,185 @@
 .form {
     position: relative;
-    left:30px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-left: 58px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
     box-sizing: border-box;
-    width: 1400px;
-    height: 64px;
     background-color: #d3c1a2;
-    // border:2px solid #d3c1a2;
     outline: 3px solid #c5ac84;
     outline-offset: 3px;
 
     &::before {
         content: "";
         position: absolute;
-        width: 508px;
-        height: 44px;
+        width: 280px;
+        height: 22px;
         background-image: url(".././img/decor-up.svg");
-        top: -43px;
-        left: 289px;
+        background-size: cover;
+        top: -26px;
+        left: 0px;
     }
 
     &::after {
         content: "";
         position: absolute;
-        width: 508px;
-        height: 44px;
+        width: 280px;
+        height: 22px;
         background-image: url(".././img/decor-up.svg");
+        background-size: cover;
         transform: rotate(180deg);
-        top: 62px;
-        left: 289px;
+        top: 260px;
+        left: 0;
+    }
+
+
+
+    @media(min-width:@desktop-base-width) {
+        width: 1100px;
+        height: 48px;
+        padding-right: 326px;
+        padding-left: 86px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        left: 30px;
+        padding-left: 58px;
+        padding-right: 425px;
+        width: 1400px;
+        height: 64px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 508px;
+            height: 44px;
+            background-image: url(".././img/decor-up.svg");
+            top: -43px;
+            left: 289px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 508px;
+            height: 44px;
+            background-image: url(".././img/decor-up.svg");
+            transform: rotate(180deg);
+            top: 62px;
+            left: 289px;
+        }
+
     }
 }
 
 .form__title {
-    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    font-size: 18px;
     font-family: @font--additional;
     font-weight: 400;
+
+    @media(min-width:@desktop-base-width) {
+        font-size: 22.5px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        font-size: 30px;
+    }
+}
+
+.form__label {
+    position: relative;
+    background-color: #ffffff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-radius: 3px;
+    // padding-left: 40px;
+    box-sizing: border-box;
+    font-size: 12px;
+    text-align: center;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url(".././img/icon-calendar.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 50%;
+        left: 30px;
+        transform: translateY(-50%);
+    }
+
+    @media(min-width:@desktop-max-width) {
+        flex-basis: 85px;
+    }
+}
+
+.form__label--guests {
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 15px;
+        height: 14px;
+        background-image: url(".././img/icon-user.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.form__input {
+    border: none;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    // margin-left: 10px;
+
+    @media(min-width:@desktop-base-width) {
+        max-width: 75px;
+        font-size: 13px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        max-width: 115px;
+        font-size: 18px;
+    }
+}
+
+// .form__input--guests {
+//     // max-width: 40px;
+// }
+
+.form__button {
+    font-size: 11px;
+    width: 180px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    outline: none;
+
+    border-radius: 3px;
+    background-color: rgb(251, 212, 7);
+    box-shadow: 0px 5px 6px 0px rgba(87, 91, 124, 0.45);
+
+    @media(min-width:@desktop-base-width) {
+        width: 135px;
+        font-size: 13.5px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        width: 180px;
+    }
 }
