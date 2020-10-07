@@ -4,6 +4,11 @@
     flex-shrink: 0;
     flex-basis: 100%;
 
+    @media(min-width: @tablet-width) {
+        flex-direction: row;
+        flex-basis: 477px;
+    }
+
     @media(min-width:@desktop-base-width) {
         flex-basis: 712px;
     }
@@ -64,6 +69,15 @@
         border: none;
     }
 
+    @media(min-width: @tablet-width) {
+        border: none;
+        flex-grow: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 15px;
+
+    }
+
     @media(min-width:@desktop-base-width) {
         font-size: 18px;
     }
@@ -83,6 +97,12 @@
     border-radius: 10px;
     line-height: 1.2;
     box-sizing: border-box;
+    white-space: nowrap;
+
+    @media(min-width: @tablet-width) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
     @media(min-width:@desktop-base-width) {
         padding-left: 11px;
