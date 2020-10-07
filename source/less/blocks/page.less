@@ -32,12 +32,13 @@
     @media(min-width:@tablet-width) {
         display: block;
         width: 320px;
-        left:-30px;
-        top:-63px;
+        left: -30px;
+        top: -63px;
     }
 
     @media(min-width:@desktop-base-width) {
         width: 731px;
+        top: -128.5px;
     }
 }
 
@@ -48,12 +49,13 @@
 .page__img--add {
     position: absolute;
     z-index: 5;
-    top: 937px;
-    left: 405px;
-    @media(min-width:@tablet-width){
-        display: none;
+    display: none;
+    @media(min-width:@tablet-width) {
+        
     }
-    @media(max-width:@desktop-base-width) {
+
+    @media(min-width:@desktop-base-width) {
+        display: block;
         width: 93px;
         top: 712px;
         left: 320px;
