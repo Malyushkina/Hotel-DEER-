@@ -126,10 +126,20 @@
     </div>
   </section>
   <section class="fog">
-
-    <img src="img/cloud@1x.png" alt="" class="fog__cloud fog__cloud--cloud1">
-    <img src="img/cloud_png_96.png" alt="" class="fog__cloud fog__cloud--cloud2">
-
+    <picture>
+      <source media="(min-width: 1920px)" srcset="img/cloud@1x.png" />
+      <source media="(min-width: 1440px)" srcset="
+            img/cloud-desktop-base@1x.png" />
+      <source media="(min-width: 768px)" srcset="img/cloud-tablet.png" />
+      <img src="img/cloud-mobile@1x.png" alt="" class="fog__cloud fog__cloud--cloud1" />
+    </picture>
+    <picture>
+      <source media="(min-width: 1920px)" srcset="img/cloud2@1x.png" />
+      <source media="(min-width: 1440px)" srcset="
+            img/cloud2-desktop-base@1x.png" />
+      <source media="(min-width: 768px)" srcset="img/cloud2-tablet.png" />
+      <img src="img/cloud2-mobile@1x.png" alt="" class="fog__cloud fog__cloud--cloud1" />
+    </picture>
   </section>
 </body>
 

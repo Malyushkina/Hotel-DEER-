@@ -6,6 +6,18 @@
     height: 100vh;
     overflow: hidden;
     z-index: -1;
+
+    @media (min-width: @tablet-width) {
+        height: 600px;
+    }
+
+    @media(min-width:@desktop-base-width) {
+        height: 976px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        height: 1400px;
+    }
 }
 
 .fog__cloud {
@@ -17,24 +29,30 @@
 
     @media (min-width: @tablet-width) {
         width: 100%;
-        height: 60vh;
+        height: 300px;
         opacity: 0.7;
     }
 
     @media(min-width:@desktop-base-width) {
         opacity: 1;
-        height: 50vh;
+        height: 600px;
+    }
+
+    @media(min-width:@desktop-max-width) {
+        height: 1100px;
     }
 }
 
 .fog__cloud--cloud1 {
-    animation: marquee 40s ease-in-out infinite;
+    animation: marquee 30s ease-in-out infinite;
     animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
 }
 
 .fog__cloud--cloud2 {
-    animation: marquee 40s linear infinite;
+    animation: marquee 30s linear infinite;
     animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
 
 @keyframes marquee {
@@ -45,7 +63,7 @@
 
     100% {
         width: 300vw;
-        transform: translate3d(-200vw, 0, 0);
+        transform: translate3d(-200vw, 20vh, -50vh);
 
     }
 }
