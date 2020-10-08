@@ -6,42 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/styles.min.css" />
   <script src="js/main.js" defer></script>
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
   <title>Отель-заповедник "Лесное"</title>
-  <!-- Pixel Glass -->
-  <!-- <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* Mobile layout by default */
-      background-image: url("img/320.png");
-    }
 
-    /* Tablet */
-    @media (min-width: 760px) {
-      HTML {
-        /* Tablet layout */
-        background-image: url("img/760.png");
-      }
-    }
-
-    @media (min-width: 1440px) {
-      HTML {
-        /* Tablet layout */
-        background-image: url("./img/main1440.png");
-      }
-    }
-
-    /* Desktop */
-    @media (min-width: 1920px) {
-      HTML {
-        /* Desktop layout */
-        background-image: url("./img/main.png");
-      }
-    }
-  </style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet" />
-  <script src="../node_modules/pixel-glass/script.js"></script> -->
-  <!-- // Pixel Glass -->
 </head>
 
 <body class="page">
@@ -63,6 +30,22 @@
     <div class="container page__container">
       <div class="page__img-wrapper">
         <picture>
+          <source media="(min-width: 1920px)" type="image/webp" srcset="
+                    img/deer@1x.webp,
+                    img/deer@2x.webp 2x
+                  " />
+          <source media="(min-width: 1440px)" type="image/webp" srcset="
+                    img/deer-desktop-base@1x.webp,
+                    img/deer-desktop-base@2x.webp 2x
+                  " />
+          <source media="(min-width: 768px)" type="image/webp" srcset="
+                    img/deer-tablet@1x.webp,
+                    img/deer-tablet@2x.webp 2x
+                  " />
+          <source type="image/webp" srcset="
+                    img/deer-mobile@1x.webp 1x,
+                    img/deer-mobile@2x.webp 2x
+                  " />
           <source media="(min-width: 1920px)" srcset="img/deer@1x.png, img/deer@2x.png 2x" />
           <source media="(min-width: 1440px)" srcset="
                 img/deer-desktop-base@1x.png,
@@ -73,6 +56,22 @@
             srcset="img/deer-mobile@1x.png, img/deer-mobile@2x.png 2x" />
         </picture>
         <picture>
+          <source media="(min-width: 1920px)" type="image/webp" srcset="
+                    img/deer-add@1x.webp,
+                    img/deer-add@2x.webp 2x
+                  " />
+          <source media="(min-width: 1440px)" type="image/webp" srcset="
+                    img/deer-add-desktop-base@1x.webp,
+                    img/deer-add-desktop-base@2x.webp 2x
+                  " />
+          <source media="(min-width: 768px)" type="image/webp" srcset="
+                    img/deer-add-tablet@1x.webp,
+                    img/deer-add-tablet@2x.webp 2x
+                  " />
+          <source type="image/webp" srcset="
+                    img/deer-add-mobile@1x.webp 1x,
+                    img/deer-add-mobile@2x.webp 2x
+                  " />
           <source media="(min-width: 1920px)" srcset="img/deer-add@1x.png, img/deer-add@2x.png 2x" />
           <source media="(min-width: 1440px)" srcset="
                 img/deer-add-desktop-base@1x.png,
@@ -98,6 +97,7 @@
             <p class="price__sup">ОТ</p>
             <p class="price__number">5 500 ₽</p>
             <p class="price__sub">в сутки</p>
+            
           </div>
           <div class="offer__description">
             4х разовое питание и all inclusive. Собственное подсобное
@@ -110,16 +110,17 @@
     <div class="container page__container">
       <form action="aaa.php" class="main__booking form">
         <h2 class="form__title">Бронирование номеров</h2>
+
         <label for="entering" class="form__label">Заезд
-          <input type="text" id="entering" class="form__input datepicker-here" placeholder="04.03.2019" />
+          <input type="text" id="entering" class="form__input" placeholder="04.03.2019" />
         </label>
 
-        <label for="departure " class="form__label">Выезд
-          <input type="text" id="departure " class="form__input datepicker-here" placeholder="04.03.2019" />
+        <label for="departure" class="form__label">Выезд
+          <input type="text" id="departure" class="form__input" placeholder="04.03.2019" />
         </label>
 
-        <label for="guests " class="form__label form__label--guests">Гости
-          <input type="number" id="guests " class="form__input form__input--guests" placeholder="1" />
+        <label for="guests" class="form__label form__label--guests">Гости
+          <input type="number" id="guests" class="form__input form__input--guests" placeholder="1" />
         </label>
         <button class="form__button">Найти номер</button>
       </form>
@@ -130,14 +131,14 @@
       <source media="(min-width: 1920px)" srcset="img/cloud@1x.png" />
       <source media="(min-width: 1440px)" srcset="
             img/cloud-desktop-base@1x.png" />
-      <source media="(min-width: 768px)" srcset="img/cloud-tablet.png" />
+      <source media="(min-width: 768px)" srcset="img/cloud-tablet@1x.png" />
       <img src="img/cloud-mobile@1x.png" alt="" class="fog__cloud fog__cloud--cloud1" />
     </picture>
     <picture>
       <source media="(min-width: 1920px)" srcset="img/cloud2@1x.png" />
       <source media="(min-width: 1440px)" srcset="
             img/cloud2-desktop-base@1x.png" />
-      <source media="(min-width: 768px)" srcset="img/cloud2-tablet.png" />
+      <source media="(min-width: 768px)" srcset="img/cloud2-tablet@1x.png" />
       <img src="img/cloud2-mobile@1x.png" alt="" class="fog__cloud fog__cloud--cloud1" />
     </picture>
   </section>
