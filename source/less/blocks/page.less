@@ -1,5 +1,4 @@
 .page {
-
     height: 100%;
     min-width: 320px;
     font-family: @font--base;
@@ -7,19 +6,45 @@
     font-size: @font-size*1.8;
     line-height: 28/18;
     background-color: #fff;
-    background-image: url("../img/background@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
+    background-image: linear-gradient(to top, #ffffff, transparent 20%),
+        url("../img/background-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, bottom center;
+    background-size: cover, cover;
 
-    // @media(min-width:@tablet-width) {
-    //     background-image: url(../img/deer-tablet@1x.png), url("../img/background@1x.jpg");
-    //     background-position: left top, top center;
-    //     background-size: 500px,cover;
-    // }
+    @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(to top, #ffffff, transparent 20%),
+            url("../img/background-mobile@2x.jpg");
+    }
 
-    @media (min-resolution:2dppx) {
-        background-image: url("../img/background@2x.jpg");
+    @media (min-width: @tablet-width) {
+        background-image: linear-gradient(to top, #ffffff, transparent 20%),
+            url("../img/background-tablet@1x.jpg");
+
+        @media (min-resolution: 2dppx) {
+            background-image: linear-gradient(to top, #ffffff, transparent 20%),
+                url("../img/background-tablet@2x.jpg");
+        }
+    }
+
+    @media (min-width: @desktop-base-width) {
+        background-image: linear-gradient(to top, #ffffff, transparent 20%),
+            url("../img/background-desktop-base@1x.jpg");
+
+        @media (min-resolution: 2dppx) {
+            background-image: linear-gradient(to top, #ffffff, transparent 20%),
+                url("../img/background-desktop-base@2x.jpg");
+        }
+    }
+
+    @media (min-width: @desktop-max-width) {
+        background-image: linear-gradient(to top, #ffffff, transparent 20%),
+            url("../img/background@1x.jpg");
+
+        @media (min-resolution: 2dppx) {
+            background-image: linear-gradient(to top, #ffffff, transparent 20%),
+                url("../img/background@2x.jpg");
+        }
     }
 }
 
@@ -29,16 +54,21 @@
     top: 0;
     width: 240px;
 
-    @media(min-width:@tablet-width) {
+    @media (min-width: @tablet-width) {
         display: block;
         width: 320px;
         left: -30px;
         top: -63px;
     }
 
-    @media(min-width:@desktop-base-width) {
+    @media (min-width: @desktop-base-width) {
         width: 731px;
         top: -128.5px;
+    }
+
+    @media (min-width: @desktop-max-width) {
+        width: 976px;
+        top: -147.8px;
     }
 }
 
@@ -50,14 +80,19 @@
     position: absolute;
     z-index: 5;
     display: none;
-    @media(min-width:@tablet-width) {
-        
-    }
 
-    @media(min-width:@desktop-base-width) {
+    @media (min-width: @tablet-width) {}
+
+    @media (min-width: @desktop-base-width) {
         display: block;
         width: 93px;
-        top: 712px;
+        top: 711px;
         left: 320px;
+    }
+
+    @media (min-width: @desktop-max-width) {
+        width: 124px;
+        top: 950px;
+        left: 426px;
     }
 }
