@@ -69,6 +69,14 @@
         border: none;
     }
 
+    &:hover {
+        color: fade(#1d1d1b, 70%);
+    }
+
+    &:active {
+        color: fade(#1d1d1b, 30%)
+    }
+
     @media(min-width: @tablet-width) {
         border: none;
         flex-grow: 0;
@@ -76,6 +84,10 @@
         padding-bottom: 20px;
         font-size: 15px;
 
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: #5a8a1d;
+        }
     }
 
     @media(min-width:@desktop-base-width) {
@@ -101,6 +113,11 @@
     line-height: 1.2;
     box-sizing: border-box;
     white-space: nowrap;
+
+    &:hover {
+        text-decoration: none;
+        color: #1d1d1b;
+    }
 
     @media(min-width: @tablet-width) {
         padding-left: 10px;
