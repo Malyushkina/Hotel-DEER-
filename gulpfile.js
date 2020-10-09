@@ -56,7 +56,7 @@ const watcher = () => {
 
 exports.default = gulp.series(styles, server, watcher);
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}").pipe(
+  return gulp.src("build/img/**/*.{jpg,png,svg}").pipe(
     imagemin([
       imagemin.optipng({
         optimizationLevel: 3,
@@ -78,6 +78,44 @@ const toWebp = () => {
         quality: 90,
       })
     )
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 };
 exports.webp = toWebp;
+const copy = () => {
+  return gulp
+    .src(
+      [
+        "source/css/**/*.css",
+        "source/fonts/**/*.{woff,woff2}",
+        "source/img/**",
+        "source/js/**",
+        "source/**/*.ico",
+        "source/*.html",
+      ], {
+        base: "source",
+      }
+    )
+    .pipe(gulp.dest("build"));
+};
+exports.copy = copy;
+
+// удалить старую версию build
+
+const clean = () => {
+  return del("build");
+};
+exports.clean = clean;
+
+const html = () => {
+  return gulp
+    .src("source/**/*.html")
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest("build"))
+};
+exports.html = html;
+
+const build = gulp.series(clean, copy, styles, images, toWebp, html);
+// const build = gulp.series(clean, copy, styles, html);
+exports.build = build;
