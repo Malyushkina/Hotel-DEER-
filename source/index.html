@@ -1,147 +1,244 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.min.css" />
+    <script src="js/main.js" defer></script>
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/cal.css" />
+    <script
+      language="JavaScript"
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/cal.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#check-in").simpleDatepicker(); // Привязать вызов календаря к полю с CSS идентификатором #calendar
+        $("#departure").simpleDatepicker();
+      });
+    </script>
+    <title>Отель-заповедник "Лесное"</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/styles.min.css" />
-  <script src="js/main.js" defer></script>
-  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-  <title>Отель-заповедник "Лесное"</title>
-
-</head>
-
-<body class="page">
-  <header class="page__header">
-    <div class="container page__container">
-      <nav class="page__nav nav nav--closed nav--nojs">
-        <button class="nav__toggle" type="button">
-          <span class="visually-hidden"> Открыть меню </span>
-        </button>
-        <a href="#" class="nav__item">Об отеле</a>
-        <a href="#" class="nav__item">Номера и цены</a>
-        <a href="#" class="nav__item">мероприятия</a>
-        <a href="#" class="nav__item">Контакты</a>
-        <span class="nav__item nav__item--tel">+7 (495) 005-61-59</span>
-      </nav>
-    </div>
-  </header>
-  <section class="page__main main">
-    <div class="container page__container">
-      <div class="page__img-wrapper">
-        <picture>
-          <source media="(min-width: 1920px)" type="image/webp" srcset="
-                    img/deer@1x.webp,
-                    img/deer@2x.webp 2x
-                  " />
-          <source media="(min-width: 1440px)" type="image/webp" srcset="
-                    img/deer-desktop-base@1x.webp,
-                    img/deer-desktop-base@2x.webp 2x
-                  " />
-          <source media="(min-width: 768px)" type="image/webp" srcset="
-                    img/deer-tablet@1x.webp,
-                    img/deer-tablet@2x.webp 2x
-                  " />
-          <source type="image/webp" srcset="
-                    img/deer-mobile@1x.webp 1x,
-                    img/deer-mobile@2x.webp 2x
-                  " />
-          <source media="(min-width: 1920px)" srcset="img/deer@1x.png, img/deer@2x.png 2x" />
-          <source media="(min-width: 1440px)" srcset="
+  <body class="page">
+    <header class="page__header">
+      <div class="container page__container">
+        <nav class="page__nav nav nav--closed nav--nojs">
+          <button class="nav__toggle" type="button">
+            <span class="visually-hidden"> Открыть меню </span>
+          </button>
+          <a href="#" class="nav__item">Об отеле</a>
+          <a href="#" class="nav__item">Номера и цены</a>
+          <a href="#" class="nav__item">мероприятия</a>
+          <a href="#" class="nav__item">Контакты</a>
+          <span class="nav__item nav__item--tel">+7 (495) 005-61-59</span>
+        </nav>
+      </div>
+    </header>
+    <section class="page__main main">
+      <div class="container page__container">
+        <div class="page__img-wrapper">
+          <picture>
+            <source
+              media="(min-width: 1920px)"
+              type="image/webp"
+              srcset="img/deer@1x.webp, img/deer@2x.webp 2x"
+            />
+            <source
+              media="(min-width: 1440px)"
+              type="image/webp"
+              srcset="
+                img/deer-desktop-base@1x.webp,
+                img/deer-desktop-base@2x.webp 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              type="image/webp"
+              srcset="img/deer-tablet@1x.webp, img/deer-tablet@2x.webp 2x"
+            />
+            <source
+              type="image/webp"
+              srcset="img/deer-mobile@1x.webp 1x, img/deer-mobile@2x.webp 2x"
+            />
+            <source
+              media="(min-width: 1920px)"
+              srcset="img/deer@1x.png, img/deer@2x.png 2x"
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcset="
                 img/deer-desktop-base@1x.png,
                 img/deer-desktop-base@2x.png 2x
-              " />
-          <source media="(min-width: 768px)" srcset="img/deer-tablet@1x.png, img/deer-tablet@2x.png 2x" />
-          <img src="img/deer-mobile@1x.png" alt="Отель-заповедник Лесное" width="180" class="page__img"
-            srcset="img/deer-mobile@1x.png, img/deer-mobile@2x.png 2x" />
-        </picture>
-        <picture>
-          <source media="(min-width: 1920px)" type="image/webp" srcset="
-                    img/deer-add@1x.webp,
-                    img/deer-add@2x.webp 2x
-                  " />
-          <source media="(min-width: 1440px)" type="image/webp" srcset="
-                    img/deer-add-desktop-base@1x.webp,
-                    img/deer-add-desktop-base@2x.webp 2x
-                  " />
-          <source media="(min-width: 768px)" type="image/webp" srcset="
-                    img/deer-add-tablet@1x.webp,
-                    img/deer-add-tablet@2x.webp 2x
-                  " />
-          <source type="image/webp" srcset="
-                    img/deer-add-mobile@1x.webp 1x,
-                    img/deer-add-mobile@2x.webp 2x
-                  " />
-          <source media="(min-width: 1920px)" srcset="img/deer-add@1x.png, img/deer-add@2x.png 2x" />
-          <source media="(min-width: 1440px)" srcset="
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/deer-tablet@1x.png, img/deer-tablet@2x.png 2x"
+            />
+            <img
+              src="img/deer-mobile@1x.png"
+              alt="Отель-заповедник Лесное"
+              width="180"
+              class="page__img"
+              srcset="img/deer-mobile@1x.png, img/deer-mobile@2x.png 2x"
+            />
+          </picture>
+          <picture>
+            <source
+              media="(min-width: 1920px)"
+              type="image/webp"
+              srcset="img/deer-add@1x.webp, img/deer-add@2x.webp 2x"
+            />
+            <source
+              media="(min-width: 1440px)"
+              type="image/webp"
+              srcset="
+                img/deer-add-desktop-base@1x.webp,
+                img/deer-add-desktop-base@2x.webp 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              type="image/webp"
+              srcset="
+                img/deer-add-tablet@1x.webp,
+                img/deer-add-tablet@2x.webp 2x
+              "
+            />
+            <source
+              type="image/webp"
+              srcset="
+                img/deer-add-mobile@1x.webp 1x,
+                img/deer-add-mobile@2x.webp 2x
+              "
+            />
+            <source
+              media="(min-width: 1920px)"
+              srcset="img/deer-add@1x.png, img/deer-add@2x.png 2x"
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcset="
                 img/deer-add-desktop-base@1x.png,
                 img/deer-add-desktop-base@2x.png 2x
-              " />
-          <source media="(min-width: 768px)" srcset="img/deer-add-tablet@1x.png, img/deer-add-tablet@2x.png 2x" />
-          <img src="img/deer-add-mobile@1x.png" alt="" width="156" class="page__img--add"
-            srcset="img/deer-add-mobile@1x.png, img/deer-add-mobile@2x.png 2x" />
-        </picture>
-      </div>
-
-      <h1 class="visually-hidden">ОТЕЛЬ-ЗАПОВЕДНИК "ЛЕСНОЕ"</h1>
-      <div class="main__wrapper">
-        <div class="main__title">
-          <div class="main__subtitle">ОТЕЛЬ-ЗАПОВЕДНИК</div>
-          <div class="main__logo logo">
-            <img src="./img/logo.svg" alt="Премиальный отдых в отеле Лесное" class="logo__img" width="100%" />
-          </div>
-          <div class="main__slogan">ПРЕМИАЛЬНЫЙ ОТДЫХ В ПОДМОСКОВЬЕ</div>
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/deer-add-tablet@1x.png, img/deer-add-tablet@2x.png 2x"
+            />
+            <img
+              src="img/deer-add-mobile@1x.png"
+              alt=""
+              width="156"
+              class="page__img--add"
+              srcset="img/deer-add-mobile@1x.png, img/deer-add-mobile@2x.png 2x"
+            />
+          </picture>
         </div>
-        <div class="main__offer offer">
-          <div class="main__price price">
-            <p class="price__sup">ОТ</p>
-            <p class="price__number">5 500 ₽</p>
-            <p class="price__sub">в сутки</p>
-            
+
+        <h1 class="visually-hidden">ОТЕЛЬ-ЗАПОВЕДНИК "ЛЕСНОЕ"</h1>
+        <div class="main__wrapper">
+          <div class="main__title">
+            <div class="main__subtitle">ОТЕЛЬ-ЗАПОВЕДНИК</div>
+            <div class="main__logo logo">
+              <img
+                src="./img/logo.svg"
+                alt="Премиальный отдых в отеле Лесное"
+                class="logo__img"
+                width="100%"
+              />
+            </div>
+            <div class="main__slogan">ПРЕМИАЛЬНЫЙ ОТДЫХ В ПОДМОСКОВЬЕ</div>
           </div>
-          <div class="offer__description">
-            4х разовое питание и all inclusive. Собственное подсобное
-            хозяйство, бассейн, баня, конный двор<br />
-            и контактный зоопарк.
+          <div class="main__offer offer">
+            <div class="main__price price">
+              <p class="price__sup">ОТ</p>
+              <p class="price__number">5 500 ₽</p>
+              <p class="price__sub">в сутки</p>
+            </div>
+            <div class="offer__description">
+              4х разовое питание и all inclusive. Собственное подсобное
+              хозяйство, бассейн, баня, конный двор<br />
+              и контактный зоопарк.
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container page__container">
-      <form action="aaa.php" class="main__booking form">
-        <h2 class="form__title">Бронирование номеров</h2>
+      <div class="container page__container">
+        <form action="aaa.php" class="main__booking form">
+          <h2 class="form__title">Бронирование номеров</h2>
 
-        <label for="entering" class="form__label">Заезд
-          <input type="text" id="entering" class="form__input" placeholder="04.03.2019" />
-        </label>
+          <label for="check-in" class="form__label"
+            >Заезд
+            <input
+              type="text"
+              id="check-in"
+              class="form__input"
+              placeholder="04.03.2019"
+              autocomplete="off"
+              required           />
+          </label>
+          <label for="departure" class="form__label"
+            >Выезд
+            <input
+              type="text"
+              id="departure"
+              class="form__input"
+              placeholder="04.03.2019"
+              autocomplete="off"
+              required
+            />
+          </label>
 
-        <label for="departure" class="form__label">Выезд
-          <input type="text" id="departure" class="form__input" placeholder="04.03.2019" />
-        </label>
-
-        <label for="guests" class="form__label form__label--guests">Гости
-          <input type="number" id="guests" class="form__input form__input--guests" placeholder="1" />
-        </label>
-        <button class="form__button">Найти номер</button>
-      </form>
-    </div>
-  </section>
-  <section class="fog">
-    <picture>
-      <source media="(min-width: 1920px)" srcset="img/cloud@1x.png" />
-      <source media="(min-width: 1440px)" srcset="
-            img/cloud-desktop-base@1x.png" />
-      <source media="(min-width: 768px)" srcset="img/cloud-tablet@1x.png" />
-      <img src="img/cloud-mobile@1x.png" alt="" class="fog__cloud fog__cloud--cloud1" />
-    </picture>
-    <picture>
-      <source media="(min-width: 1920px)" srcset="img/cloud2@1x.png" />
-      <source media="(min-width: 1440px)" srcset="
-            img/cloud2-desktop-base@1x.png" />
-      <source media="(min-width: 768px)" srcset="img/cloud2-tablet@1x.png" />
-      <img src="img/cloud2-mobile@1x.png" alt="" class="fog__cloud fog__cloud--cloud1" />
-    </picture>
-  </section>
-</body>
-
+          <label for="guests" class="form__label form__label--guests"
+            >Гости
+            <input
+              type="number"
+              id="guests"
+              class="form__input form__input--guests"
+              placeholder="1"
+              min="1"
+            />
+          </label>
+          <button class="form__button">Найти номер</button>
+        </form>
+      </div>
+    </section>
+    <section class="fog">
+      <picture>
+        <source media="(min-width: 1920px)" srcset="img/cloud@1x.png" />
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/cloud-desktop-base@1x.png"
+        />
+        <source media="(min-width: 768px)" srcset="img/cloud-tablet@1x.png" />
+        <img
+          src="img/cloud-mobile@1x.png"
+          alt=""
+          class="fog__cloud fog__cloud--cloud1"
+        />
+      </picture>
+      <picture>
+        <source media="(min-width: 1920px)" srcset="img/cloud2@1x.png" />
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/cloud2-desktop-base@1x.png"
+        />
+        <source media="(min-width: 768px)" srcset="img/cloud2-tablet@1x.png" />
+        <img
+          src="img/cloud2-mobile@1x.png"
+          alt=""
+          class="fog__cloud fog__cloud--cloud1"
+        />
+      </picture>
+    </section>
+  </body>
 </html>

@@ -2,15 +2,17 @@
     position: relative;
     display: grid;
     grid-template-columns: auto auto;
-    column-gap: 20px;
+    column-gap: 15px;
     row-gap: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 17px;
+
+    padding-top: 5px;
+    padding-bottom: 22px;
     box-sizing: border-box;
     background-color: #d3c1a2;
-    outline: 3px solid #c5ac84;
-    outline-offset: 3px;
+    outline: 2px solid #ffffff;
+    outline-offset: -4px;
 
     &::before {
         content: "";
@@ -19,7 +21,7 @@
         height: 22px;
         background-image: url(".././img/decor-up.svg");
         background-size: cover;
-        top: -25px;
+        top: -20px;
         left: 0px;
     }
 
@@ -31,7 +33,7 @@
         background-image: url(".././img/decor-up.svg");
         background-size: cover;
         transform: rotate(180deg);
-        bottom: -24px;
+        bottom: -20px;
         left: 0;
     }
 
@@ -42,8 +44,8 @@
         justify-content: space-between;
         align-items: center;
         padding-bottom: 0;
-        padding-top: 7px;
-        padding-bottom: 7px;
+        padding-top: 13px;
+        padding-bottom: 13px;
         flex-wrap: wrap;
 
         &::before,
@@ -62,7 +64,7 @@
 
     @media(min-width:@desktop-base-width) {
         width: 1043px;
-       
+
         padding-right: 200px;
         padding-left: 86px;
 
@@ -73,12 +75,12 @@
         }
 
         &::before {
-            top: -35px;
+            top: -30px;
             left: 422px;
         }
 
         &::after {
-            bottom: -35px;
+            bottom: -30px;
             left: 422px;
         }
     }
@@ -88,14 +90,14 @@
         padding-left: 58px;
         padding-right: 425px;
         width: 1400px;
-        
+
         &::before {
             content: "";
             position: absolute;
             width: 508px;
             height: 44px;
             background-image: url(".././img/decor-up.svg");
-            top: -43px;
+            top: -39px;
             left: 545px;
         }
 
@@ -106,7 +108,7 @@
             height: 44px;
             background-image: url(".././img/decor-up.svg");
             transform: rotate(180deg);
-            bottom:-43px;
+            bottom: -38px;
             left: 291px;
         }
     }
@@ -175,7 +177,7 @@
             left: 13px;
         }
     }
- 
+
     @media(min-width:@desktop-max-width) {
         flex-basis: 160px;
         padding-top: 5px;
@@ -227,6 +229,7 @@
 }
 
 .form__input {
+
     border: none;
     outline: none;
     width: 100%;
@@ -234,6 +237,7 @@
     text-align: center;
     font-size: 12px;
     font-weight: 500;
+    color: #444444;
 
     &:hover {
         opacity: 0.8;
@@ -247,6 +251,11 @@
     &::placeholder {
         color: #444444;
         font-size: 12px;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+        box-shadow: 0 0 1px 0 #e74646;
+        border-radius: 2px;
     }
 
     @media(min-width:@desktop-base-width) {
